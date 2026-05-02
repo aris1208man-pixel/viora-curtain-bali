@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather Dashboard</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="weather-container">
+  <!-- Header -->
+  <header class="header">
+    <h1><i class="fas fa-cloud-sun"></i> Weather Dashboard</h1>
+    <p>Real-time weather information</p>
+  </header>
+
+  <!-- Search Bar -->
+  <div class="search-section">
+    <div class="search-box">
+      <input 
+        type="text" 
+        id="searchInput" 
+        class="search-input" 
+        placeholder="Search city (e.g., Jakarta, London, Tokyo)..."
+      >
+      <button id="searchBtn" class="search-btn">
+        <i class="fas fa-search"></i> Search
+      </button>
+    </div>
+    <button id="locationBtn" class="location-btn" title="Use my location">
+      <i class="fas fa-map-marker-alt"></i> Current Location
+    </button>
+  </div>
+
+  <!-- Loading Spinner -->
+  <div id="loading" class="loading" style="display: none;">
+    <div class="spinner"></div>
+    <p>Loading weather data...</p>
+  </div>
+
+  <!-- Error Message -->
+  <div id="errorMessage" class="error-message" style="display: none;"></div>
+
+  <!-- Current Weather Card -->
+  <div id="currentWeather" class="current-weather" style="display: none;">
+    <div class="weather-header">
+      <div class="city-info">
+        <h2 id="cityName"></h2>
+        <p id="date"></p>
+      </div>
+      <div class="weather-main">
+        <img id="weatherIcon" src="" alt="Weather icon">
+        <div class="temperature">
+          <span id="temp" class="temp-value"></span>
+          <span class="temp-unit">°C</span>
+        </div>
+      </div>
+    </div>
+    <p id="weatherDesc" class="weather-description"></p>
+    <div class="weather-details">
+      <div class="detail-item">
+        <i class="fas fa-droplet"></i>
+        <div>
+          <p class="label">Humidity</p>
+          <p id="humidity" class="value"></p>
+        </div>
+      </div>
+      <div class="detail-item">
+        <i class="fas fa-wind"></i>
+        <div>
+          <p class="label">Wind Speed</p>
+          <p id="windSpeed" class="value"></p>
+        </div>
+      </div>
+      <div class="detail-item">
+        <i class="fas fa-gauge"></i>
+        <div>
+          <p class="label">Pressure</p>
+          <p id="pressure" class="value"></p>
+        </div>
+      </div>
+      <div class="detail-item">
+        <i class="fas fa-eye"></i>
+        <div>
+          <p class="label">Visibility</p>
+          <p id="visibility" class="value"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Forecast Section -->
+  <div id="forecastSection" class="forecast-section" style="display: none;">
+    <h3>5-Day Forecast</h3>
+    <div id="forecastContainer" class="forecast-container"></div>
+  </div>
+
+  <!-- Recent Searches -->
+  <div class="recent-searches" id="recentSearches" style="display: none;">
+    <h3>Recent Searches</h3>
+    <div id="recentList" class="recent-list"></div>
+  </div>
+</div>
+
+<footer>
+  <p>Powered by <a href="https://openweathermap.org" target="_blank">OpenWeatherMap API</a></p>
+  <p>© 2026 Weather Dashboard. All rights reserved.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
