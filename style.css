@@ -1,0 +1,305 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #F5F1E9;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Navigation */
+.navbar {
+  background: #8B6F47;
+  color: white;
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  transition: opacity 0.3s;
+}
+
+.nav-links a:hover {
+  opacity: 0.8;
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(135deg, #8B6F47 0%, #A0845B 100%);
+  color: white;
+  padding: 120px 20px;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  animation: slideDown 0.8s ease-out;
+}
+
+.hero p {
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+  opacity: 0.95;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 12px 30px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.btn-primary {
+  background: #D4A574;
+  color: #333;
+}
+
+.btn-primary:hover {
+  background: #E5B88E;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.btn-secondary {
+  background: #8B6F47;
+  color: white;
+}
+
+.btn-secondary:hover {
+  background: #6B5435;
+  transform: translateY(-2px);
+}
+
+/* Products Section */
+.produk {
+  padding: 80px 20px;
+  background: white;
+}
+
+.produk h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #8B6F47;
+  margin-bottom: 3rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.card {
+  background: #F5F1E9;
+  padding: 2rem;
+  border-radius: 10px;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+}
+
+.card-icon {
+  font-size: 3rem;
+  color: #8B6F47;
+  margin-bottom: 1rem;
+}
+
+.card h3 {
+  color: #8B6F47;
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+}
+
+.card p {
+  color: #666;
+  margin-bottom: 1.5rem;
+}
+
+/* About Section */
+.about {
+  padding: 80px 20px;
+  background: white;
+}
+
+.about h2 {
+  font-size: 2.5rem;
+  color: #8B6F47;
+  margin-bottom: 2rem;
+}
+
+.about-text p {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 1.5rem;
+  line-height: 1.8;
+}
+
+.features {
+  list-style: none;
+}
+
+.features li {
+  padding: 0.7rem 0;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.features i {
+  color: #8B6F47;
+  margin-right: 0.7rem;
+}
+
+/* Contact Section */
+.contact {
+  padding: 80px 20px;
+  background: #F5F1E9;
+}
+
+.contact h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #8B6F47;
+  margin-bottom: 3rem;
+}
+
+.contact-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.info-item {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.info-item i {
+  font-size: 2rem;
+  color: #8B6F47;
+  margin-top: 0.5rem;
+}
+
+.info-item h4 {
+  color: #8B6F47;
+  margin-bottom: 0.5rem;
+}
+
+.info-item a {
+  color: #8B6F47;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.info-item a:hover {
+  color: #6B5435;
+}
+
+/* Footer */
+footer {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 2rem;
+}
+
+footer .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.social-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.social-links a {
+  color: white;
+  font-size: 1.5rem;
+  transition: color 0.3s;
+}
+
+.social-links a:hover {
+  color: #8B6F47;
+}
+
+/* Animations */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .produk h2,
+  .about h2,
+  .contact h2 {
+    font-size: 2rem;
+  }
+
+  footer .container {
+    flex-direction: column;
+  }
+}
